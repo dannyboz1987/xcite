@@ -31,7 +31,12 @@ UI_DIR = $$DESTDIR/.u
 
 SOURCES += main/main.cpp \
 	    backend/backend.cpp \
-	    backend/iobject.cpp
+	    backend/iobject.cpp \
+    backend/backend.cpp \
+    backend/iobject.cpp \
+    frontend/GridStarLayout/qquickgriddefinition.cpp \
+    frontend/GridStarLayout/qquickgridstar.cpp \
+    main/main.cpp
 
 RESOURCES += frontend/qml.qrc
 
@@ -39,38 +44,22 @@ QML2_IMPORT_PATH += frontend/EmbeddedAuto
 include("frontend/GridStarLayout/quickgridstarlayout.pri")
 
 HEADERS  += backend/backend.hpp \
-	    backend/iobject.hpp
+	    backend/iobject.hpp \
+    backend/backend.hpp \
+    backend/iobject.hpp \
+    frontend/GridStarLayout/qquickgriddefinition.h \
+    frontend/GridStarLayout/qquickgridstar.h
 
 DISTFILES += \
     android/AndroidManifest.xml \
     android/gradle/wrapper/gradle-wrapper.jar \
     android/gradlew \
-    android/res/values/libs.xml \
-    android/build.gradle \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat \
-    android/AndroidManifest.xml \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradlew \
-    android/res/values/libs.xml \
-    android/build.gradle \
-    android/gradle/wrapper/gradle-wrapper.properties \
-    android/gradlew.bat \
-    android/res/values/apptheme.xml \
-    android/AndroidManifest.xml \
-    android/gradle/wrapper/gradle-wrapper.jar \
-    android/gradlew \
+    android/res/drawable/splash.xml \
     android/res/values/apptheme.xml \
     android/res/values/libs.xml \
-    android/res/drawable-hdpi/icon.png \
-    android/res/drawable-ldpi/icon.png \
-    android/res/drawable-mdpi/icon.png \
     android/gradle/wrapper/gradle-wrapper.properties \
     android/build.gradle \
     android/gradlew.bat \
     android/gradle.properties \
-    android/local.properties \
-    android/res/drawable/splash.xml
-
-ANDROID_PACKAGE_SOURCE_DIR = $$PWD/android
+    android/local.properties
 
